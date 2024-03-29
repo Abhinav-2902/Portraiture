@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+  <title>Khushboo Kumari- Portfolio</title>
+  <meta name="description"
+    content="Hello there, I'm Abhinav kumar – an intrepid explorer through the lens, on a relentless quest to capture the world's boundless wonders. Join me in unraveling the extraordinary through my lens as I embark on a visual journey like no other." />
+  <style>
+    #ab {
+      margin-right: 100px;
+    }
+  </style>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="dist/assets/favicon.ico" />
+  <link rel="stylesheet" href="dist/output.css" />
+  <!-- <link rel="stylesheet" href="styles.css" /> -->
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <!-- Start - Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- End - Fonts -->
+  <!-- Start - Fancybox Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <!-- End - Fancybox Scripts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      content: ["./dist/*.{html,js}"],
+      theme: {
+        extend: {
+          fontFamily: {
+            nothingyoucoulddo: ["Nothing You Could Do", "cursive"],
+            signika: ["Signika", "sans-serif"],
+          },
+        },
+      },
+      plugins: [],
+    };
+  </script>
+</head>
+
+<body class=" bg-white h-screen text-black px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
+  <!-- Navbar -->
+  <header class="flex w-full overflow-hidden pt-10 pb-1">
+    <!-- Navbar -->
+    <nav id="nav" x-data="{ open: false }" role="navigation" class="w-full">
+      <div class="container mx-auto flex flex-wrap items-center md:flex-no-wrap">
+        <div class="mr-4 md:mr-8">
+          <a href="index.html" class="text-2xl font-signika font-bold"
+            style="font-family:'Times New Roman', Times, serif ; font-size:xx-large;">Khushboo Kumari</a>
+        </div>
+        <div class="ml-auto md:hidden flex items-center justify-start">
+          <button onclick="menuToggle()" @click="open = !open"
+            class="tap-highlight-transparent text-black dark:text-white w-5 h-5 relative focus:outline-none"
+            @click="open = !open">
+            <span class="sr-only">Open main menu</span>
+            <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <span aria-hidden="true"
+                class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
+                :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+              <span aria-hidden="true"
+                class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
+                :class="{'opacity-0': open } "></span>
+              <span aria-hidden="true"
+                class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
+                :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+            </div>
+          </button>
+        </div>
+        <div id="menu"
+          class="w-full h-full h-0 transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center">
+          <ul id="ulMenu"
+            class="flex flex-col duration-300 ease-out md:space-x-5 sm:transition-none mt-5 md:flex-row md:items-center md:ml-auto md:mt-0 md:pt-0 md:border-0">
+
+            <li class="group transition duration-300">
+              <a href="index.html" class="font-signika text-2xl tap-highlight-transparent">PORTFOLIO
+                <span class="hidden md:block h-0.5 bg-black dark:bg-white"></span>
+              </a>
+            </li>
+            <li class="group transition duration-300">
+              <a href="dist/about_me.html" class="font-signika text-2xl tap-highlight-transparent">ABOUT ME
+                <span
+                  class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+  <!-- Content -->
+  <br>
+  <div class="container mx-auto">
+    <h1 class="text-4xl pt-10 pb-8 font-bold" style="font-family:'Times New Roman', Times, serif ;">PORTFOLIO</h1>
+    <section class="text-neutral-700">
+      <div class="container w-full">
+        <div class="flex flex-wrap w-full h-3/4">
+          <div class="flex w-full flex-wrap">
+            <div class="w-full p-1">
+              <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./dist/assets/carousel 1.JPG" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./dist/assets/carousel 2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./dist/assets/carausel 3.jpeg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./dist/assets/carausel 4.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./dist/assets/holi 1.JPG" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./dist/assets/cake 2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <!-- <div class="overflow-hidden h-full w-full">
+                  <a
+                    href="./dist/assets/7.jpg"
+                    data-fancybox="gallery"
+                  >
+                    <img
+                      alt="a person standing in front of a rock formation"
+                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      src="./dist/assets/7.jpg"
+                    />
+                  </a>
+                </div> -->
+
+            </div>
+            <div class="wh-full md:w-1/3 p-1">
+              <div class="overflow-hidden h-full w-full" style="margin-top: 25px;">
+                <a href="./dist/assets/2.jpeg" data-fancybox="gallery">
+                  <img alt="a cat laying on top of a sidewalk next to the ocean"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./dist/assets/2.jpeg" />
+                </a>
+              </div>
+            </div>
+            <div class="w-full md:w-1/3 p-1">
+              <div class="overflow-hidden h-full w-full" style="margin-top: 25px;">
+                <a href="./dist/assets/5.jpeg" data-fancybox="gallery">
+                  <img alt="a branch of a plant floating in a body of water"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./dist/assets/5.jpeg" />
+                </a>
+              </div>
+            </div>
+            <div class="w-full md:w-1/3 p-1">
+              <div class="overflow-hidden h-full w-full" style="margin-top: 25px;">
+                <a href="./dist/assets/4.jpg" data-fancybox="gallery">
+                  <img alt="a blue sky with a lot of red and orange clouds"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./dist/assets/4.jpg" />
+                </a>
+              </div>
+            </div>
+            <div class="w-full md:w-1/4 h-full md:h-1/4 p-1" style="margin-top: 35px;">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./dist/assets/7.jpg" data-fancybox="gallery">
+                  <img alt="a view of the ocean from the top of a hill"
+                    class="h-48 mx-auto object-cover rounded-full w-48 opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./dist/assets/7.jpg" />
+                </a>
+              </div>
+            </div>
+            <div class="w-full md:w-1/4 h-full md:h-1/4 p-1" style="margin-top: 35px;">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./dist/assets/8.JPG" data-fancybox="gallery">
+                  <img alt="a pheasant flying in the sky with its wings spread"
+                    class="h-48 mx-auto object-cover rounded-full w-48 opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./dist/assets/8.JPG" />
+                </a>
+              </div>
+            </div>
+            <div class="w-full md:w-1/4 h-full md:h-1/4 p-1" style="margin-top: 35px;">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./dist/assets/glass.jpg" data-fancybox="gallery">
+                  <img alt="a statue of a man next to a statue of a woman"
+                    class="h-48 mx-auto object-cover rounded-full w-48 opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./dist/assets/glass.jpg" />
+                </a>
+              </div>
+            </div>
+            <div class="w-full md:w-1/4 h-full md:h-1/4 p-1" style="margin-top: 35px;">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./dist/assets/9.JPG" data-fancybox="gallery">
+                  <img alt="a statue of a man next to a statue of a woman"
+                    class="h-48 mx-auto object-cover rounded-full w-48 opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./dist/assets/9.JPG" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="wh-full md:w-1/3 p-1">
+            <div class="overflow-hidden h-full w-full" style="margin-top: 50px;">
+              <a href="./dist/assets/2.JPG" data-fancybox="gallery">
+                <img alt="a cat laying on top of a sidewalk next to the ocean"
+                  class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                  src="./dist/assets/2.JPG" />
+              </a>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 p-1">
+            <div class="overflow-hidden h-full w-full" style="margin-top: 50px;">
+              <a href="./dist/assets/WhatsApp Image 2024-03-29 at 21.39.00_4f2c3b04.jpg" data-fancybox="gallery">
+                <img alt="a branch of a plant floating in a body of water"
+                  class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                  src="./dist/assets/WhatsApp Image 2024-03-29 at 21.39.00_4f2c3b04.jpg" />
+              </a>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 p-1">
+            <div class="overflow-hidden h-full w-full" style="margin-top: 50px;">
+              <a href="./dist/assets/bread.JPG" data-fancybox="gallery">
+                <img id="ab" alt="a blue sky with a lot of red and orange clouds"
+                  class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                  src="./dist/assets/bread.JPG" />
+              </a>
+            </div>
+
+            <div class="w-full md:w-1/4 h-full md:h-1/4 p-1" style="margin-top: 35px;">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./dist/assets/9.JPG" data-fancybox="gallery">
+                  <img alt="a statue of a man next to a statue of a woman"
+                    class="h-48 mx-auto object-cover rounded-full w-48 opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./dist/assets/9.JPG" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="wh-full md:w-1/3 p-1">
+            <div class="overflow-hidden h-full w-full" style="margin-top: 50px;">
+              <a href="./dist/assets/pink cake.jpg" data-fancybox="gallery">
+                <img alt="a cat laying on top of a sidewalk next to the ocean"
+                  class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                  src="./dist/assets/pink cake.jpg" />
+              </a>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 p-1">
+            <div class="overflow-hidden h-full w-full" style="margin-top: 50px;">
+              <a href="./dist/assets/pastry.jpg" data-fancybox="gallery">
+                <img alt="a branch of a plant floating in a body of water"
+                  class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                  src="./dist/assets/pastry.jpg" />
+              </a>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 p-1">
+            <div class="overflow-hidden h-full w-full" style="margin-top: 50px;">
+              <a href="./dist/assets/brownie.jpg" data-fancybox="gallery">
+                <img id="ab" alt="a blue sky with a lot of red and orange clouds"
+                  class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                  src="./dist/assets/brownie.jpg" />
+              </a>
+            </div>
+
+            <div class="flex w-full flex-wrap">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  
+  <!-- Footer -->
+  <footer class="mt-20">
+    <div class="flex justify-center">
+        <img src="./dist/assets/logo.png" alt="Logo" class="h-36 w-36">
+    </div>
+    <p class="text-xs text-gray-600 dark:text-gray-300 text-center" style="margin-top: -36px;">
+        © 2024 Developed and Designed by
+        <a class="underline">Abhinav Kumar</a>
+    </p>
+</footer>
+
+
+  <!-- Script for the LightBox -->
+  <script>
+    Fancybox.bind("[data-fancybox]", {});
+  </script>
+  <script src="dist/fade_in.js"></script>
+  <script src="dist/menu.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
